@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41B02311B865CA500B40812 /* OnelookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41B02301B865CA500B40812 /* OnelookSearchViewController.swift */; };
+		F41B02351B86612F00B40812 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41B02341B86612F00B40812 /* ResultsTableViewController.swift */; };
+		F41B02371B8663E100B40812 /* DatamuseAPISearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41B02361B8663E100B40812 /* DatamuseAPISearcher.swift */; };
 		F486FE231B86598B00484E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486FE221B86598B00484E98 /* AppDelegate.swift */; };
-		F486FE251B86598B00484E98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486FE241B86598B00484E98 /* ViewController.swift */; };
-		F486FE281B86598B00484E98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F486FE261B86598B00484E98 /* Main.storyboard */; };
 		F486FE2A1B86598B00484E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F486FE291B86598B00484E98 /* Assets.xcassets */; };
 		F486FE2D1B86598B00484E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F486FE2B1B86598B00484E98 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F41B02301B865CA500B40812 /* OnelookSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnelookSearchViewController.swift; sourceTree = "<group>"; };
+		F41B02341B86612F00B40812 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		F41B02361B8663E100B40812 /* DatamuseAPISearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatamuseAPISearcher.swift; sourceTree = "<group>"; };
 		F486FE1F1B86598B00484E98 /* Monkey Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monkey Puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F486FE221B86598B00484E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F486FE241B86598B00484E98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F486FE271B86598B00484E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F486FE291B86598B00484E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F486FE2C1B86598B00484E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F486FE2E1B86598B00484E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				F486FE221B86598B00484E98 /* AppDelegate.swift */,
-				F486FE241B86598B00484E98 /* ViewController.swift */,
-				F486FE261B86598B00484E98 /* Main.storyboard */,
 				F486FE291B86598B00484E98 /* Assets.xcassets */,
 				F486FE2B1B86598B00484E98 /* LaunchScreen.storyboard */,
 				F486FE2E1B86598B00484E98 /* Info.plist */,
+				F41B02301B865CA500B40812 /* OnelookSearchViewController.swift */,
+				F41B02361B8663E100B40812 /* DatamuseAPISearcher.swift */,
+				F41B02341B86612F00B40812 /* ResultsTableViewController.swift */,
 			);
 			path = "Monkey Puzzle";
 			sourceTree = "<group>";
@@ -123,7 +126,6 @@
 			files = (
 				F486FE2D1B86598B00484E98 /* LaunchScreen.storyboard in Resources */,
 				F486FE2A1B86598B00484E98 /* Assets.xcassets in Resources */,
-				F486FE281B86598B00484E98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,22 +136,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F486FE251B86598B00484E98 /* ViewController.swift in Sources */,
+				F41B02351B86612F00B40812 /* ResultsTableViewController.swift in Sources */,
+				F41B02311B865CA500B40812 /* OnelookSearchViewController.swift in Sources */,
 				F486FE231B86598B00484E98 /* AppDelegate.swift in Sources */,
+				F41B02371B8663E100B40812 /* DatamuseAPISearcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F486FE261B86598B00484E98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F486FE271B86598B00484E98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F486FE2B1B86598B00484E98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +279,7 @@
 				F486FE331B86598B00484E98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
