@@ -56,8 +56,13 @@ class OnelookSearchViewController: UITableViewController, UISearchResultsUpdatin
         resultsController.words = []
         resultsController.tableView.reloadData()
       } else {
+        // TODO: add short delay, cancel any existing queries still queued waiting for their delay to expire
         // Send text to Datamuse API
-        wordSearcher.fetchResults(text, completion: { (results) -> () in
+        self.wordSearcher.fetchResults(text, completion: { (searchText, results) -> () in
+          // If these are stale results, discard them
+          if searchText != searchController.searchBar.text {
+            return
+          }
           let resultsController = searchController.searchResultsController as! ResultsTableViewController
           resultsController.words = results
           resultsController.tableView.reloadData()

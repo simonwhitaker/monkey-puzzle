@@ -12,13 +12,14 @@ class DatamuseAPISearcher: NSObject {
   
   // Increments with each search, ensures only the latest search results are sent back to the caller
   private var searchIndex = 0
+  
   private let session: NSURLSession
   
   override init() {
     session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
   }
   
-  func fetchResults(searchText: String, completion: (results: [String]) -> ()) {
+  func fetchResults(searchText: String, completion: (searchText: String, results: [String]) -> ()) {
     if searchText.isEmpty {
       return
     }
@@ -35,7 +36,7 @@ class DatamuseAPISearcher: NSObject {
             let words = results.valueForKeyPath("word") as! [String]
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-              completion(results: words)
+              completion(searchText: searchText, results: words)
             })
           } catch {
             
