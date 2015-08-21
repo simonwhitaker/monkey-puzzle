@@ -42,7 +42,7 @@ class ResultsTableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let urlString = "http://www.onelook.com/?w=" + words[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+    let urlString = "http://www.onelook.com/?w=" + words[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
     let vc = SFSafariViewController(URL: NSURL(string: urlString)!)
     presentViewController(vc, animated: true, completion: nil)
   }

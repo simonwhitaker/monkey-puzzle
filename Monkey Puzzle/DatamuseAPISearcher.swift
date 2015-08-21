@@ -13,7 +13,7 @@ class DatamuseAPISearcher: NSObject {
   private let session: NSURLSession
   
   override init() {
-    session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+    session = NSURLSession(configuration: .defaultSessionConfiguration())
   }
   
   func fetchResults(searchText: String, completion: (searchText: String, results: [String]) -> ()) {
@@ -21,7 +21,7 @@ class DatamuseAPISearcher: NSObject {
       return
     }
     
-    let urlString = "https://api.datamuse.com/words?sp=" + searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+    let urlString = "https://api.datamuse.com/words?sp=" + searchText.stringByAddingPercentEncodingWithAllowedCharacters(.URLQueryAllowedCharacterSet())!
     let url = NSURL(string: urlString)
     let task = session.dataTaskWithURL(url!) { (data, response, error) -> Void in
       guard let httpResponse = response as! NSHTTPURLResponse? else { return }
