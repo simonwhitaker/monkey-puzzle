@@ -27,17 +27,16 @@ class DatamuseAPISearcher: NSObject {
     let urlString = "https://api.datamuse.com/words?sp=" + searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
     let url = NSURL(string: urlString)
     let task = session.dataTaskWithURL(url!) { (data, response, error) -> Void in
-      if let httpResponse = response as! NSHTTPURLResponse? {
-        if httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299 && data != nil {
-          do {
-            let results = try NSJSONSerialization.JSONObjectWithData(data!, options: [])
-            let words = results.valueForKeyPath("word") as! [String]
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-              completion(searchText: searchText, results: words)
-            })
-          } catch {
-            
-          }
+      guard let httpResponse = response as! NSHTTPURLResponse? else { return }
+      if httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299 && data != nil {
+        do {
+          let results = try NSJSONSerialization.JSONObjectWithData(data!, options: [])
+          let words = results.valueForKeyPath("word") as! [String]
+          dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            completion(searchText: searchText, results: words)
+          })
+        } catch {
+          
         }
       }
     }
