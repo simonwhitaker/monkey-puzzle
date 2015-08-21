@@ -6,6 +6,7 @@
 //  Copyright © 2015 Simon Whitaker. All rights reserved.
 //
 
+import SafariServices
 import UIKit
 
 class ResultsTableViewController: UITableViewController {
@@ -38,5 +39,11 @@ class ResultsTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCellWithIdentifier(ResultsTableViewController.cellIdentifier, forIndexPath: indexPath)
     cell.textLabel?.text = words[indexPath.row]
     return cell
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let urlString = "http://www.onelook.com/?w=" + words[indexPath.row].stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+    let vc = SFSafariViewController(URL: NSURL(string: urlString)!)
+    presentViewController(vc, animated: true, completion: nil)
   }
 }
