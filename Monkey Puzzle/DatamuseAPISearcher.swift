@@ -30,11 +30,8 @@ class DatamuseAPISearcher: NSObject {
       if let httpResponse = response as! NSHTTPURLResponse? {
         if httpResponse.statusCode >= 200 && httpResponse.statusCode <= 299 && data != nil {
           do {
-            let options = NSJSONReadingOptions(rawValue: 0)
-            let results = try NSJSONSerialization.JSONObjectWithData(data!, options: options)
-            
+            let results = try NSJSONSerialization.JSONObjectWithData(data!, options: [])
             let words = results.valueForKeyPath("word") as! [String]
-            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
               completion(searchText: searchText, results: words)
             })
