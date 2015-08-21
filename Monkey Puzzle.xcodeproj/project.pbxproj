@@ -13,6 +13,7 @@
 		F486FE231B86598B00484E98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F486FE221B86598B00484E98 /* AppDelegate.swift */; };
 		F486FE2A1B86598B00484E98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F486FE291B86598B00484E98 /* Assets.xcassets */; };
 		F486FE2D1B86598B00484E98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F486FE2B1B86598B00484E98 /* LaunchScreen.storyboard */; };
+		F49AFA391B873987004BFA2C /* README.markdown in Sources */ = {isa = PBXBuildFile; fileRef = F49AFA381B873987004BFA2C /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F486FE291B86598B00484E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F486FE2C1B86598B00484E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F486FE2E1B86598B00484E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49AFA381B873987004BFA2C /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 		F486FE161B86598B00484E98 = {
 			isa = PBXGroup;
 			children = (
+				F49AFA381B873987004BFA2C /* README.markdown */,
 				F486FE211B86598B00484E98 /* Monkey Puzzle */,
 				F486FE201B86598B00484E98 /* Products */,
 			);
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41B02351B86612F00B40812 /* ResultsTableViewController.swift in Sources */,
+				F49AFA391B873987004BFA2C /* README.markdown in Sources */,
 				F41B02311B865CA500B40812 /* OnelookSearchViewController.swift in Sources */,
 				F486FE231B86598B00484E98 /* AppDelegate.swift in Sources */,
 				F41B02371B8663E100B40812 /* DatamuseAPISearcher.swift in Sources */,
