@@ -10,9 +10,6 @@ import UIKit
 
 class DatamuseAPISearcher: NSObject {
   
-  // Increments with each search, ensures only the latest search results are sent back to the caller
-  private var searchIndex = 0
-  
   private let session: NSURLSession
   
   override init() {
